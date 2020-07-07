@@ -1,0 +1,51 @@
+module channels_priority(Reset,DREQ0,DREQ1,DREQ2,DREQ3,DACK0,DACK1,DACK2,DACK3,HRQ,HLDA,COMMAND,MASK,REQUEST,clk);
+
+input [7:0]COMMAND;
+input [3:0]MASK , REQUEST;
+input wire DREQ0,DREQ1,DREQ2,DREQ3,HLDA,clk,Reset;
+output reg DACK0,DACK1,DACK2,DACK3,HRQ;
+
+always @(posedge clk)
+begin
+
+if(Reset) begin DACK0=0;DACK1=0;DACK2=0;DACK3=0; end
+
+else
+begin
+
+DACK0=0;DACK1=0;DACK2=0;DACK3=0;		//AS THE CHANGE IN DACK APPEAR
+
+if(REQUEST[2]==0)				//REQUEST:HIGHER PRIORITY FROM HARDWARE
+begin
+
+if(COMMAND[6] == 0 && COMMAND[7])		//COMMAND[6]->DREQ enable COMAND[7]->DACK enable
+begin
+
+if(DREQ0 && MASK[0]==0)		DACK0=1;	//MASK is enable Or disable channel(MASK[0]=0->enable channel 0 ya 7ywan ya wy4o)
+
+else if(DREQ1 && MASK[1]==0)	DACK1=1;
+
+else if(DREQ2 && MASK[2]==0)	DACK2=1;
+
+else if(DREQ3 && MASK[3]==0)	DACK3=1;
+end
+end
+
+else 						
+begin 
+
+if(REQUEST[1:0]==2'b00)		DACK0=1;		//GETTING SELECTED CHANNEL FROM PROCESSOR
+else if(REQUEST[1:0]==2'b01)	DACK1=1;
+else if(REQUEST[1:0]==2'b10)	DACK2=1;
+else if(REQUEST[1:0]==2'b11)	DACK3=1;
+end
+ 
+if(DACK0==1||DACK1==1||DACK2==1||DACK3==1)	HRQ=1;	//enabl the HRQ
+
+end 
+end
+
+endmodule
+
+
+

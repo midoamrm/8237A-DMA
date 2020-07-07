@@ -1,0 +1,224 @@
+# Reading C:/intelFPGA_pro/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# OpenFile F:/DMA/DMA.mpf
+# Loading project DMA
+# Compile of A0A3Decoder.v was successful.
+# Compile of Channels_Priority_1.v was successful.
+# Compile of COMMAND_Register.v was successful.
+# Compile of convert8to16Buffer.v was successful.
+# Compile of DMA.v was successful.
+# Compile of EL_Joker.v was successful.
+# Compile of FIFO.v was successful.
+# Compile of IObuffer.v was successful.
+# Compile of testatatt.v was successful.
+# Compile of testato.v was successful.
+# Compile of Transfer_Modes.v was successful.
+# 11 compiles, 0 failed with no errors.
+# Compile of A0A3Decoder.v was successful.
+# Compile of Channels_Priority_1.v was successful.
+# Compile of COMMAND_Register.v was successful.
+# Compile of convert8to16Buffer.v was successful.
+# Compile of DMA.v was successful.
+# Compile of EL_Joker.v was successful.
+# Compile of FIFO.v was successful.
+# Compile of IObuffer.v was successful.
+# Compile of testatatt.v was successful.
+# Compile of testato.v was successful.
+# Compile of Transfer_Modes.v was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.DMA
+# vsim -gui work.DMA 
+# Start time: 21:56:58 on Dec 27,2019
+# Loading work.DMA
+# Loading work.A0A3Decoder
+# Loading work.holdRequest
+# Loading work.channels_priority
+# Loading work.COMMAND_register
+# Loading work.MASK_register
+# Loading work.REQUEST_register
+# Loading work.BaseAddress_and_BaseCount
+# Loading work.current_address
+# Loading work.Mode_register
+# Loading work.transferMode
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch0'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch1'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch2'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch3'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch_out'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+add wave sim:/DMA/*
+force -freeze sim:/DMA/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/DMA/IOW 1 0
+force -freeze sim:/DMA/DMA_data_bus_in 1 0
+force -freeze sim:/DMA/address_A_in 7 0
+# Invalid binary digit: 7.
+# ** Error: (vsim-4011) Invalid force value: 7 0.
+# 
+run
+force -freeze sim:/DMA/HLDA 0 0
+# Compile of COMMAND_Register.v was successful.
+# Compile of COMMAND_Register.v was successful.
+run
+restart
+# Loading work.COMMAND_register
+# Loading work.MASK_register
+# Loading work.REQUEST_register
+# Loading work.BaseAddress_and_BaseCount
+# Loading work.current_address
+# Loading work.Mode_register
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch0'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch1'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch2'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch3'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch_out'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+force -freeze sim:/DMA/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/DMA/HLDA 1 0
+force -freeze sim:/DMA/commandReg 1 0
+force -freeze sim:/DMA/mode_register 0 0
+force -freeze sim:/DMA/baseAddress_register 1 0
+force -freeze sim:/DMA/destination_register 10 0
+force -freeze sim:/DMA/baseCount_register 1 0
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+force -freeze sim:/DMA/DMA_data_bus_in 111 0
+force -freeze sim:/DMA/DACK0 1 0
+run
+run
+# WARNING: No extended dataflow license exists
+run
+restart
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch0'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch1'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch2'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch3'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch_out'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+force -freeze sim:/DMA/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/DMA/HLDA 1 0
+force -freeze sim:/DMA/commandReg 1 0
+force -freeze sim:/DMA/mode_register 0 0
+force -freeze sim:/DMA/baseAddress_register 1 0
+force -freeze sim:/DMA/destination_register 10 0
+force -freeze sim:/DMA/baseCount_register 3 0
+# Invalid binary digit: 3.
+# ** Error: (vsim-4011) Invalid force value: 3 0.
+# 
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+force -freeze sim:/DMA/DACK0 1 0
+run
+run
+run
+run
+run
+# Compile of A0A3Decoder.v was successful.
+# Compile of Channels_Priority_1.v was successful.
+# Compile of COMMAND_Register.v was successful.
+# Compile of convert8to16Buffer.v was successful.
+# Compile of DMA.v was successful.
+# Compile of EL_Joker.v was successful.
+# Compile of FIFO.v was successful.
+# Compile of IObuffer.v was successful.
+# Compile of testatatt.v was successful.
+# Compile of testato.v was successful.
+# Compile of Transfer_Modes.v was successful.
+# 11 compiles, 0 failed with no errors.
+restart
+# Loading work.DMA
+# Loading work.A0A3Decoder
+# Loading work.holdRequest
+# Loading work.channels_priority
+# Loading work.COMMAND_register
+# Loading work.MASK_register
+# Loading work.REQUEST_register
+# Loading work.BaseAddress_and_BaseCount
+# Loading work.current_address
+# Loading work.Mode_register
+# Loading work.transferMode
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch0'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch1'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch2'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch3'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch_out'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+quit -sim
+# End time: 22:06:34 on Dec 27,2019, Elapsed time: 0:09:36
+# Errors: 2, Warnings: 21
+# Compile of A0A3Decoder.v was successful.
+# Compile of Channels_Priority_1.v was successful.
+# Compile of COMMAND_Register.v was successful.
+# Compile of convert8to16Buffer.v was successful.
+# Compile of DMA.v was successful.
+# Compile of EL_Joker.v was successful.
+# Compile of FIFO.v was successful.
+# Compile of IObuffer.v was successful.
+# Compile of testatatt.v was successful.
+# Compile of testato.v was successful.
+# Compile of Transfer_Modes.v was successful.
+# 11 compiles, 0 failed with no errors.
+vsim -gui work.DMA
+# vsim -gui work.DMA 
+# Start time: 22:06:49 on Dec 27,2019
+# Loading work.DMA
+# Loading work.A0A3Decoder
+# Loading work.holdRequest
+# Loading work.channels_priority
+# Loading work.COMMAND_register
+# Loading work.MASK_register
+# Loading work.REQUEST_register
+# Loading work.BaseAddress_and_BaseCount
+# Loading work.current_address
+# Loading work.Mode_register
+# Loading work.transferMode
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch0'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch1'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch2'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch3'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+# ** Warning: (vsim-3015) F:/DMA/DMA.v(24): [PCDPC] - Port size (16) does not match connection size (1) for port 'ch_out'. The port definition is at: F:/DMA/Channels_Priority_1.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /DMA/priorityCheck File: F:/DMA/Channels_Priority_1.v
+add wave sim:/DMA/*
+force -freeze sim:/DMA/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/DMA/HLDA 1 0
+force -freeze sim:/DMA/commandReg 1 0
+force -freeze sim:/DMA/mode_register 0 0
+force -freeze sim:/DMA/baseAddress_register 1 0
+force -freeze sim:/DMA/destination_register 10 0
+force -freeze sim:/DMA/baseCount_register 3 0
+# Invalid binary digit: 3.
+# ** Error: (vsim-4011) Invalid force value: 3 0.
+# 
+run
+force -freeze sim:/DMA/DACK0 1 0
+run
+run
+run
+run
+run
+run
+run
+# End time: 22:11:57 on Dec 27,2019, Elapsed time: 0:05:08
+# Errors: 1, Warnings: 5

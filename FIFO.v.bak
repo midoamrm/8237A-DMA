@@ -1,0 +1,105 @@
+module fifo (data_out_32bit,data_out_8bit,data_in_32bit,write,read_1,read_2,read_3,read_4,read_32bit,clk);
+input [31:0] data_in_32bit;
+output reg [7:0] data_out_8bit;
+output reg [31:0] data_out_32bit;
+reg[7:0] fifo [0:3];
+input write,read_1,read_2,read_3,read_4,read_32bit,clk;
+
+always @(posedge clk)
+begin
+
+if(write == 1)
+begin 
+fifo[3]<= data_in_32bit[7:0];
+fifo[2]<= data_in_32bit[15:8];
+fifo[1]<= data_in_32bit[23:16];
+fifo[0]<= data_in_32bit[31:24];
+end
+// DMA will read each line from processor in four steps*****
+if(write == 0 && read_1 ==1)
+begin 
+data_out_8bit<=fifo[0];
+end
+if(write == 0 && read_2 ==1)
+begin 
+data_out_8bit<=fifo[1];
+end
+if(write == 0 && read_3 ==1)
+begin 
+data_out_8bit<=fifo[2];
+end
+if(write == 0 && read_4 ==1)
+begin 
+data_out_8bit<=fifo[3];
+end
+//**********************************************************
+//processor reads the four lines of fifo in one step as one instruction****
+if(write == 0 &&read_32bit==1)
+begin 
+data_out_32bit[7:0]<=fifo[0];
+data_out_32bit[15:8]<=fifo[1];
+data_out_32bit[23:16]<=fifo[2];
+data_out_32bit[31:24]<=fifo[3];
+end
+//*************************************************************************
+end
+endmodule
+
+
+
+module tb ();
+reg clk;
+reg[31:0]data_in_32bit;
+wire[7:0]data_out_8bit;
+wire[31:0]data_out_32bit;
+reg write,read_1,read_2,read_3,read_4;
+fifo myfifo(data_out_32bit,data_out_8bit,data_in_32bit,write,read_1,read_2,read_3,read_4,read_32bit,clk);
+initial 
+begin
+data_in_32bit = 32'h0000ffff;
+write = 1'b1;
+clk=1;
+//$monitor("%b %b %b %b",fifo[0],fifo[1],fifo[2],fifo[3]);
+#5
+clk=0;
+#5
+write = 1'b0;
+read_1=1;
+read_2=0;
+read_3=0;
+read_4=0;
+clk=1;
+#5
+clk=0;
+#5
+write = 1'b0;
+read_1=0;
+read_2=1;
+read_3=0;
+read_4=0;
+clk=1;
+#5
+clk=0;
+#5
+write = 1'b0;
+read_1=0;
+read_2=0;
+read_3=1;
+read_4=0;
+clk=1;
+#5
+clk=0;
+#5
+write = 1'b0;
+read_1=0;
+read_2=0;
+read_3=0;
+read_4=1;
+clk=1;
+#5
+clk=0;
+end
+endmodule
+
+
+ 

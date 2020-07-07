@@ -1,0 +1,93 @@
+F:/DMA/testato.v {1 {vlog -work work -stats=none F:/DMA/testato.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module testato
+
+Top level modules:
+	testato
+
+} {} {}} F:/DMA/FIFO.v {1 {vlog -work work -stats=none F:/DMA/FIFO.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module fifo
+
+Top level modules:
+	fifo
+
+} {} {}} F:/DMA/Transfer_Modes.v {1 {vlog -work work -stats=none F:/DMA/Transfer_Modes.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module transferMode
+
+Top level modules:
+	transferMode
+
+} {} {}} F:/DMA/Channels_Priority_1.v {1 {vlog -work work -stats=none F:/DMA/Channels_Priority_1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module holdRequest
+-- Compiling module channels_priority
+
+Top level modules:
+	holdRequest
+	channels_priority
+
+} {} {}} F:/DMA/convert8to16Buffer.v {1 {vlog -work work -stats=none F:/DMA/convert8to16Buffer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module writeBuffer
+
+Top level modules:
+	writeBuffer
+
+} {} {}} F:/DMA/DMA.v {1 {vlog -work work -stats=none F:/DMA/DMA.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module DMA
+-- Compiling module DMA_tb
+
+Top level modules:
+	DMA_tb
+
+} {} {}} F:/DMA/IObuffer.v {1 {vlog -work work -stats=none F:/DMA/IObuffer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module IObuffer
+
+Top level modules:
+	IObuffer
+
+} {} {}} F:/DMA/testatatt.v {1 {vlog -work work -stats=none F:/DMA/testatatt.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module external
+
+Top level modules:
+	external
+
+} {} {}} F:/DMA/COMMAND_Register.v {1 {vlog -work work -stats=none F:/DMA/COMMAND_Register.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module COMMAND_register
+-- Compiling module MASK_register
+-- Compiling module REQUEST_register
+-- Compiling module BaseAddress_and_BaseCount
+-- Compiling module current_address
+-- Compiling module Mode_register
+-- Compiling module STATUS_register
+
+Top level modules:
+	COMMAND_register
+	MASK_register
+	REQUEST_register
+	BaseAddress_and_BaseCount
+	current_address
+	Mode_register
+	STATUS_register
+
+} {} {}} F:/DMA/A0A3Decoder.v {1 {vlog -work work -stats=none F:/DMA/A0A3Decoder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module A0A3Decoder
+
+Top level modules:
+	A0A3Decoder
+
+} {} {}} F:/DMA/EL_Joker.v {1 {vlog -work work -stats=none F:/DMA/EL_Joker.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module elJoker
+
+Top level modules:
+	elJoker
+
+} {} {}}
